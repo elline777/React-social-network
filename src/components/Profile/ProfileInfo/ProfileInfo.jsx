@@ -9,15 +9,12 @@ const ProfileInfo = (props) => {
   }
   return (
     <div>
-      {/* <div>
-        <img
-          src='https://jssors8.azureedge.net/demos/image-slider/img/px-beach-daylight-fun-1430675-image.jpg'
-          alt=''
-        />
-      </div> */}
       <div className={s.descriptionBlock}>
         <img src={props.profile.photos.large} alt='' />
-        <ProfileStatus status={'Hello my friends'} />
+        <ProfileStatus
+          status={props.status}
+          updateStatus={props.updateStatus}
+        />
       </div>
     </div>
   );
